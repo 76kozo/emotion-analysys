@@ -373,7 +373,7 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-gray-900 text-white h-screen flex flex-col p-4 font-sans">
+        <div className="text-white min-h-screen flex flex-col p-4 font-sans">
             <header className="w-full mb-4 flex-shrink-0">
                 <h1 className="text-3xl font-bold text-center text-gray-200">リアルタイム感情分析</h1>
             </header>
