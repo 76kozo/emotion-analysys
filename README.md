@@ -49,7 +49,7 @@
 
 1.  **リポジトリをクローン**
     ```bash
-    git clone https://github.com/your-username/emotion-analysys.git
+    git clone https://github.com/76kozo/emotion-analysys.git
     ```
 
 2.  **プロジェクトディレクトリへ移動**
@@ -72,8 +72,8 @@
 
 6.  **APIキーの入力と分析開始**
     -   画面上部の入力フィールドに、ご自身の **Google Cloud Vision APIキー** を貼り付けます。
-    -   `Start Capture` ボタンをクリックしてWebカメラを起動します。
-    -   `Start Analysis` ボタンをクリックすると、リアルタイム感情分析が開始されます。
+    -   `カメラON` ボタンをクリックしてWebカメラを起動します。
+    -   `分析開始` ボタンをクリックすると、リアルタイム感情分析が開始されます。
 
 ## 📄 ライセンス
 
