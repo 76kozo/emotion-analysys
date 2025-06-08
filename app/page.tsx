@@ -262,20 +262,21 @@ export default function Home() {
         ctx.strokeRect(x, y, width, height);
         
         // 2. 最も強い感情を特定
-        let dominantEmotion = 'neutral';
+        let dominantEmotion: keyof typeof emotions = 'neutral';
         let maxScore = 0;
         
         emotionKeys.forEach(key => {
-            const score = LIKELIHOOD_MAPPING[faceAnnotation[emotions[key as keyof typeof emotions].apiLabel]] || 0;
+            const typedKey = key as keyof typeof emotions;
+            const score = LIKELIHOOD_MAPPING[faceAnnotation[emotions[typedKey].apiLabel]] || 0;
             if (score > maxScore) {
                 maxScore = score;
-                dominantEmotion = key;
+                dominantEmotion = typedKey;
             }
         });
         
-        // 3. アノテーションテキストの描画
-        const emotionName = dominantEmotion.charAt(0).toUpperCase() + dominantEmotion.slice(1);
-        const label = `${emotionName}: ${Math.round(maxScore * 100)}%`;
+        // 3. アノテーションテキストの描画 (日本語と絵文字を使用)
+        const { japanese, emoji } = emotions[dominantEmotion];
+        const label = `${japanese} ${emoji}: ${Math.round(maxScore * 100)}%`;
         
         ctx.font = '20px sans-serif';
         const textMetrics = ctx.measureText(label);
