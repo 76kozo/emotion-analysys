@@ -1,5 +1,11 @@
 # Realtime Emotion Analyzer (リアルタイム感情分析アプリ)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://emotion-analysys.vercel.app/)
+
+**[>>> 公開デモはこちら (Live Demo)](https://emotion-analysys.vercel.app/) <<<**
+
+---
+
 このプロジェクトは、Webカメラからの映像を利用して、リアルタイムで人物の感情を分析し、視覚的に表示するWebアプリケーションです。Google Cloud Vision APIを活用し、検出された感情を複数のインタラクティブなグラフで可視化します。ユーザー自身のAPIキーを使用して、セキュアかつプライベートな環境で分析を実行できます。
 
 ## ✨ 主な機能
